@@ -3,6 +3,7 @@
     --szurke : rgb(70, 70, 70);
 }
 body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     margin: 0;
     padding:1rem;
@@ -47,6 +48,10 @@ body{
 .bevitel > input:focus{
     outline: none;
 }
+.elem{
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+}
 input:checked ~ .szoveg{
     text-decoration: line-through;
 }
@@ -63,4 +68,10 @@ input[type="checkbox"]{
     color: var(--szurke);
     background: rgb(224, 224, 224);
     border-left: 3px solid var(--szurke);
+}
+span{
+    user-select: none;
+}
+.x:hover{
+    color: tomato;
 }
