@@ -42,13 +42,8 @@ body{
     width: min(100%, 40rem);
     display:grid;
     text-align: center;
+    background: var(--szurke);
 }
-@media screen and (min-width: 500px) {
-    .bevitel{
-        grid-template-columns: 2fr 1fr;
-    }
-}
-
 .bevitel > input{
     font-size: .8em;
     padding-inline:1em;
@@ -68,12 +63,14 @@ input[type="checkbox"]{
     margin:0;
 }
 #hozzaad{
+    box-sizing: border-box;
     margin:0;
     color: white;
     background: var(--szurke);
     font-weight: bold;
     text-align: center;
-    border-inline: 3px solid var(--szurke);
+    border: 3px solid var(--szurke);
+    border-left: 0px solid transparent;
 }
 #hozzaad:hover{
     color: var(--szurke);
@@ -102,4 +99,17 @@ label[for="eltuntet"]{
     color: var(--szurke);
     background: rgb(224, 224, 224);
     border: 3px solid var(--szurke);
+}
+@media screen and (min-width: 500px) {
+    .bevitel{
+        grid-template-columns: 2fr 1fr;
+    }
+    #hozzaad{
+        border: 0px solid transparent;
+        border-left: 3px solid var(--szurke);
+    }
+    #hozzaad:hover{
+        color: var(--szurke);
+        background: rgb(224, 224, 224);
+    }
 }

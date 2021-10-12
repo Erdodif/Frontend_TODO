@@ -1,12 +1,14 @@
+let tunnnek = false;
 function init(){
     document.getElementById("hozzaad").addEventListener("click",hozzaad);
     document.getElementById("torolhakesz").addEventListener("click",torolHaKesz);
+    document.getElementById("eltuntet").addEventListener("change",eltuntet);
 }
 function hozzaad(){
     let szoveg = document.getElementById("new").value;
     let lista = document.getElementById("lista");
     lista.appendChild(kartya(szoveg,lista.childElementCount));
-    szoveg = "";
+    document.getElementById("new").value = "";
 }
 
 function kartya(tartalom,id){
@@ -50,8 +52,19 @@ function torolHaKesz(){
 }
 function valt(id){
     document.getElementById(`elem_${id}`).classList.toggle("kesz");
+    eltuntet(false);
 }
-function eltuntet(){
-    //Ez még kell
+function eltuntet(valt = true){
+    let lista = document.getElementById("lista").children;
+    tunnnek = valt ? !tunnnek : tunnnek;
+    for(let elem of lista){
+        if (tunnnek && elem.classList.contains("kesz")){
+            elem.style.display = "none";
+        }
+        else{
+            elem.style.display = "grid";
+        }
+    }
+
 }
 document.addEventListener("DOMContentLoaded",init);
