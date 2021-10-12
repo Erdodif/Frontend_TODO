@@ -1,0 +1,66 @@
+
+:root{
+    --szurke : rgb(70, 70, 70);
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding:1rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: min(20rem, 80%);
+    margin-inline: auto;
+    padding-inline: 1em;
+}
+.elem{
+    width: 100%;
+    padding-block: 1em;
+    border-bottom: 2px dotted gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.bevitel{
+    border: 3px solid var(--szurke);
+    position: fixed;
+    font-size: 1.5em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.3em;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+}
+.bevitel > input{
+    padding-inline:1em;
+    border: 0;
+}
+.bevitel > input:focus{
+    outline: none;
+}
+input:checked ~ .szoveg{
+    text-decoration: line-through;
+}
+input[type="checkbox"]{
+    margin:0;
+}
+#hozzaad{
+    color: white;
+    background: var(--szurke);
+    font-weight: bold;
+    padding-block: auto;
+}
+#hozzaad:hover{
+    color: var(--szurke);
+    background: rgb(224, 224, 224);
+    border-left: 3px solid var(--szurke);
+}
