@@ -75,3 +75,21 @@ span{
 .x:hover{
     color: tomato;
 }
+label[for="eltuntet"]{
+    margin-left: 1em;
+}
+#torolhakesz{
+    box-sizing: border-box;
+    float: right;
+    padding-block: .2em;
+    padding-inline: .8em;
+    color: white;
+    background: var(--szurke);
+    font-weight: bold;
+    border: 3px solid var(--szurke);
+}
+#torolhakesz:hover{
+    color: var(--szurke);
+    background: rgb(224, 224, 224);
+    border: 3px solid var(--szurke);
+}
